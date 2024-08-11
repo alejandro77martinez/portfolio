@@ -1,13 +1,13 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Sofadi_One } from "next/font/google";
 import "./globals.css";
 import NavBar from "@/app/ui/header"
 import Footer from "./ui/footer";
 
-const inter = Inter({ subsets: ["latin"] });
+const inter = Sofadi_One({ subsets: ['latin'], weight: "400", style: "normal" });
 
 export const metadata: Metadata = {
-  title: "Alejandro Martinez",
+  title: "Alejandro Martínez",
 };
 
 export default function RootLayout({
