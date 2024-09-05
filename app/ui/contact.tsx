@@ -1,14 +1,15 @@
 export default function ContactMe() {
   return (
-    <div className="flex items-center max-lg:flex-col w-full pt-7">
-      <div className="border w-full lg:w-2/4 h-auto">
+    <div className="flex max-lg:flex-col max-lg:pt-0 w-full pt-6 max-w-7xl mx-auto">
+      <div className="w-full lg:w-2/4 h-auto">
         <div className="h-auto w-5/6 mx-auto max-lg:w-full max-lg:px-4">
-          <h1 className="text-3xl text-center font-bold underline decoration-wavy mb-16">Contactame</h1>
+          <h1 className="text-3xl text-center font-bold underline decoration-wavy mb-24 max-lg:mb-7">Contactame</h1>
           <div className="bg-violet-200 p-4 shadow-2xl shadow-black rounded-xl border-2 border-black mb-10">
             <p className="mb-8">
               Puede enviar un correo electronico a la siguiente direccion;
-              alejandro.martinez.nava@outlook.com o dejar un mensaje en el siguiente formulario, 
-              si lo prefiere tambien puede contactarme en mis redes sociales acontinuacion mostradas.
+              <span className="underline"> alejandro.martinez.nava @outlook.com</span> o dejar un mensaje en el 
+              siguiente formulario y me comunicare con usted lo antes posible, o si lo prefiere 
+              tambien puede contactarme en mis redes sociales acontinuacion mostradas.
             </p>
             <div className="flex gap-2 my-2 justify-center">
               <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="48" height="48" viewBox="0 0 24 24">
@@ -27,26 +28,27 @@ export default function ContactMe() {
           </div>  
         </div>
       </div>
-      <div className="border w-full lg:w-2/4 h-auto pt-8">
+      <div className="w-full lg:w-2/4 h-auto pt-2 max-lg:pt-0">
         <div className="h-auto w-5/6 mx-auto max-lg:w-full max-lg:px-4">
-          <div className="bg-violet-200 p-8 shadow-2xl shadow-black rounded-xl border-2 border-black">
-            <form className="mx-auto flex flex-col gap-3">
+          <div className="bg-violet-200 p-6 shadow-2xl shadow-black rounded-xl border-2 border-black mb-10">
+            <form className="mx-auto flex flex-col gap-2">
               <div>
-                <label htmlFor="input1" className="block pl-2 mb-2 text-sm font-medium text-black dark:text-white">Nombre</label>
-                <input type="text" id="input1" className="block w-full p-2 border border-gray-700 text-black rounded-lg bg-gray-50 text-md focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"/>
+                <label htmlFor="input1" className="block pl-2 mb-2 text-base font-medium text-black">Nombre</label>
+                <input type="text" id="input1" className="block w-full p-2 border border-gray-700 text-black rounded-lg bg-gray-50 text-base " placeholder="Juan Mendez"/>
               </div>
               <div>
-                <label htmlFor="input1" className="block pl-2 mb-2 text-sm font-medium text-black dark:text-white">Email</label>
-                <input type="text" id="input1" className="block w-full p-2 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 text-xs focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"/>
+                <label htmlFor="input2" className="block pl-2 mb-2 text-sm font-medium text-black">Email</label>
+                <input type="email" id="input2" className="block w-full p-2 text-black border border-gray-700 rounded-lg bg-gray-50 text-base " placeholder="juan_mendez@email.com"/>
               </div>
               <div>
-                <label htmlFor="input1" className="block pl-2 mb-2 text-sm font-medium text-black dark:text-white">Telefono</label>
-                <input type="text" id="input1" className="block w-full p-2 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 text-xs focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"/>
+                <label htmlFor="input3" className="block pl-2 mb-2 text-base font-medium text-black">Telefono</label>
+                <input type="tel" id="input3" className="block w-full p-2 text-black border border-gray-700 rounded-lg bg-gray-50 text-base " placeholder="55-44-88-66-77"/>
               </div>
               <div>
-                <label htmlFor="message" className="block pl-2 mb-2 text-sm font-medium text-black dark:text-white">Mensaje</label>
-                <textarea id="message" rows={4} className="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Leave a comment..."></textarea>
+                <label htmlFor="message" className="block pl-2 mb-2 text-base font-medium text-black">Mensaje</label>
+                <textarea id="message" rows={3} className="block p-2.5 w-full text-base text-black bg-gray-50 rounded-lg border border-gray-700 " placeholder="Lo contacto por..."></textarea>
               </div>
+              <button type="submit" className="w-2/4 mx-auto mt-2 text-white bg-gradient-to-t from-gray-400 via-gray-900 to-gray-400 hover:bg-gradient-to-br focus:ring-2 focus:ring-black shadow-md shadow-black font-medium rounded-full text-base px-5 py-1.5 text-center">Enviar</button>
             </form>
           </div>
         </div>
