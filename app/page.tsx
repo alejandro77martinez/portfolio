@@ -2,8 +2,8 @@ import Image from "next/image";
 
 export default function Home() {
   return (
-    <div className="min-h-screen flex justify-center items-center px-40 max-lg:px-20 max-lg:text-center max-md:px-4 max-md:pb-5">
-      <div className="flex items-center bg-violet-200 h-4/6 shadow-2xl shadow-black rounded-xl border-2 border-black max-lg:flex-col max-lg:h-auto max-lg:mt-14">
+    <div className="min-h-screen flex justify-center items-center px-40 max-lg:px-20 max-lg:text-center max-md:px-4 max-lg:pb-6">
+      <div className="flex items-center max-w-5xl mt-4 bg-violet-200 h-4/6 shadow-2xl shadow-black rounded-xl border-2 border-black max-lg:flex-col max-lg:h-auto max-lg:mt-16">
         <div className="w-2/5 flex justify-center py-5 max-lg:py-3">
           <Image
             src="/im.png"

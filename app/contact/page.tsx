@@ -1,7 +1,9 @@
+import ContactMe from "../ui/contact";
+
 export default function Contact() {
-    return (
-      <main className="flex min-h-screen flex-col items-center justify-between p-24">
-        <h1>Contacto</h1>
-      </main>
-    );
-  }
+  return (
+    <main className="min-h-screen pt-16">
+      <ContactMe/>
+    </main>
+  );
+}
