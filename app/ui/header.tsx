@@ -2,31 +2,38 @@
 import Image from 'next/image'
 import clsx from 'clsx';
 import { useState } from 'react';
+import Link from 'next/link';
 
 export default function NavBar() {
   const [floatMenu, setFloatMenu] = useState(false);
   const handlerMenu = () => {setFloatMenu(!floatMenu)}
   return(
     <>
-      <nav className="fixed w-full h-16 max-lg:h-14 flex justify-between items-center backdrop-blur-md border-b border-gray-300 bg-transparent">
+      <nav className="z-50 fixed w-full h-16 max-lg:h-14 flex justify-between items-center backdrop-blur-sm bg-transparent border-b border-[#336B87]/20">
         <div className='px-0 mt-1 lg:px-2'>
-          <a href='/'>
+          <Link href='/'>
             <Image
               src="/iconAM.png"
               width={70}
               height={80}
-              className="block"
+              className="block filter drop-shadow-[0_0_10px_rgba(255,255,255,255)]"
               alt="Logotipo"
             />
-          </a>
+          </Link>
         </div>
         <div className='px-6 flex h-10 gap-4 py-1 max-lg:hidden'>
-          <a href='about' type="button" className="text-white bg-gradient-to-t from-gray-400 via-gray-900 to-gray-400 hover:bg-gradient-to-br focus:ring-2 focus:ring-black shadow-md shadow-black font-medium rounded-full text-sm px-5 py-1.5 text-center">Sobre mi</a> 
-          <a href='contact' type="button" className="text-white bg-gradient-to-t from-gray-400 via-gray-900 to-gray-400 hover:bg-gradient-to-br focus:ring-2 focus:ring-black shadow-md shadow-black font-medium rounded-full text-sm px-5 py-1.5 text-center">Contacto</a>
-          <a href='projects' type="button" className="text-white bg-gradient-to-t from-gray-400 via-gray-900 to-gray-400 hover:bg-gradient-to-br focus:ring-2 focus:ring-black shadow-md shadow-black font-medium rounded-full text-sm px-5 py-1.5 text-center">Proyectos</a>
+          <Link href='about' className="relative btn-ember inline-flex items-center gap-2 px-8 py-3.5 rounded-xl font-medium uppercase tracking-widest text-white overflow-hidden border border-transparent bg-gradient-to-br from-[#2A3132] via-[#336B87] to-[#90AFC5] transition-all duration-200 hover:-translate-y-0.5 hover:shadow-[0_8px_28px_rgba(51,107,135,0.35),0_2px_8px_rgba(118,54,38,0.25)] active:scale-95 active:shadow-none">
+            Sobre mi
+          </Link> 
+          <Link href='projects' className="relative btn-ember inline-flex items-center gap-2 px-8 py-3.5 rounded-xl font-medium uppercase tracking-widest text-white overflow-hidden border border-transparent bg-gradient-to-br from-[#2A3132] via-[#336B87] to-[#90AFC5] transition-all duration-200 hover:-translate-y-0.5 hover:shadow-[0_8px_28px_rgba(51,107,135,0.35),0_2px_8px_rgba(118,54,38,0.25)] active:scale-95 active:shadow-none">
+            Proyectos
+          </Link>
+          <Link href='contact' className="relative btn-ember inline-flex items-center gap-2 px-8 py-3.5 rounded-xl font-medium uppercase tracking-widest text-white overflow-hidden border border-transparent bg-gradient-to-br from-[#2A3132] via-[#336B87] to-[#90AFC5] transition-all duration-200 hover:-translate-y-0.5 hover:shadow-[0_8px_28px_rgba(51,107,135,0.35),0_2px_8px_rgba(118,54,38,0.25)] active:scale-95 active:shadow-none">
+            Contacto
+          </Link>
         </div>
         <div className='px-2 py-2 lg:hidden'>
-          <button className='bg-gradient-to-t from-gray-400 via-gray-900 to-gray-400 hover:bg-gradient-to-br focus:ring-2 focus:ring-black shadow-md shadow-black rounded-full p-1.5' onClick={() => {handlerMenu()}}>
+          <button className="relative btn-ember inline-flex items-center gap-2 p-1 rounded-xl font-medium uppercase tracking-widest text-white overflow-hidden border border-transparent bg-gradient-to-br from-[#2A3132] via-[#336B87] to-[#90AFC5] transition-all duration-200 hover:-translate-y-0.5 hover:shadow-[0_8px_28px_rgba(51,107,135,0.35),0_2px_8px_rgba(118,54,38,0.25)] active:scale-95 active:shadow-none" onClick={() => {handlerMenu()}}>
             <svg className={clsx('',{'hidden':floatMenu === !false})} xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="32" height="32" viewBox="0,0,256,256" style={{fill:'white'}}>
               <g fill="#ffffff" fillRule="nonzero" stroke="none" strokeWidth="1" strokeLinecap="butt" strokeLinejoin="miter" strokeMiterlimit="10" strokeDasharray="" strokeDashoffset="0" style={{mixBlendMode: 'normal'}}><g transform="scale(2.56,2.56)"><path d="M13,29.908c0,0 3.887,-1.186 10.237,-2.424c6.347,-1.239 15.169,-2.501 24.951,-2.646c9.782,-0.142 18.638,0.862 25.018,1.915c6.383,1.052 10.303,2.124 10.303,2.124c0,0 -3.972,0.865 -10.352,1.751c-6.383,0.885 -15.162,1.819 -24.856,1.96c-9.694,0.143 -18.496,-0.534 -24.902,-1.232c-6.403,-0.7 -10.399,-1.448 -10.399,-1.448zM13.02,52.356c0,0 16.009,-4.436 35.924,-5.131c19.915,-0.695 36.194,2.614 36.194,2.614c0,0 -16.008,4.436 -35.923,5.131c-19.915,0.695 -36.195,-2.614 -36.195,-2.614zM14.643,74.235c0,0 16.323,-4.291 36.58,-4.807c20.257,-0.516 36.777,2.941 36.777,2.941c0,0 -16.323,4.291 -36.58,4.807c-20.257,0.515 -36.777,-2.941 -36.777,-2.941z"></path></g></g>
             </svg>
@@ -36,10 +43,16 @@ export default function NavBar() {
           </button>
         </div>
       </nav>
-      <div className={clsx('p-5 flex flex-col gap-5 fixed top-14 right-2 rounded-b-lg border border-gray-300 backdrop-blur-md bg-transparent',{'hidden':floatMenu === false})}>
-        <a href='about' type="button" className="text-white bg-gradient-to-t from-gray-400 via-gray-900 to-gray-400 hover:bg-gradient-to-br focus:ring-2 focus:ring-black shadow-md shadow-black font-medium rounded-full text-base px-5 py-1.5 text-center">Sobre mi</a> 
-        <a href='contact' type="button" className="text-white bg-gradient-to-t from-gray-400 via-gray-900 to-gray-400 hover:bg-gradient-to-br focus:ring-2 focus:ring-black shadow-md shadow-black font-medium rounded-full text-base px-5 py-1.5 text-center">Contacto</a>
-        <a href='projects' type="button" className="text-white bg-gradient-to-t from-gray-400 via-gray-900 to-gray-400 hover:bg-gradient-to-br focus:ring-2 focus:ring-black shadow-md shadow-black font-medium rounded-full text-base px-5 py-1.5 text-center">Proyectos</a>
+      <div className={clsx('p-5 flex flex-col gap-5 fixed top-16 right-4 rounded-2xl border border-[#336B87]/30 backdrop-blur-sm bg-transparent shadow-2xl z-40 min-w-[200px] lg:hidden',{'hidden':floatMenu === false})}>
+        <Link href='about' className="relative btn-ember inline-flex items-center gap-2 px-4 py-2 rounded-xl font-medium uppercase tracking-widest text-white overflow-hidden border border-transparent bg-gradient-to-br from-[#2A3132] via-[#336B87] to-[#90AFC5] transition-all duration-200 hover:-translate-y-0.5 hover:shadow-[0_8px_28px_rgba(51,107,135,0.35),0_2px_8px_rgba(118,54,38,0.25)] active:scale-95 active:shadow-none">
+          <span className="mx-auto">Sobre mi</span>
+        </Link>
+        <Link href='projects' className="relative btn-ember inline-flex items-center gap-2 px-4 py-2 rounded-xl font-medium uppercase tracking-widest text-white overflow-hidden border border-transparent bg-gradient-to-br from-[#2A3132] via-[#336B87] to-[#90AFC5] transition-all duration-200 hover:-translate-y-0.5 hover:shadow-[0_8px_28px_rgba(51,107,135,0.35),0_2px_8px_rgba(118,54,38,0.25)] active:scale-95 active:shadow-none">
+          <span className="mx-auto">Proyectos</span>
+        </Link> 
+        <Link href='contact' className="relative btn-ember inline-flex items-center gap-2 px-4 py-2 rounded-xl font-medium uppercase tracking-widest text-white overflow-hidden border border-transparent bg-gradient-to-br from-[#2A3132] via-[#336B87] to-[#90AFC5] transition-all duration-200 hover:-translate-y-0.5 hover:shadow-[0_8px_28px_rgba(51,107,135,0.35),0_2px_8px_rgba(118,54,38,0.25)] active:scale-95 active:shadow-none">
+          <span className="mx-auto">Contacto</span>
+        </Link>
       </div>
     </>
   )
