@@ -4,7 +4,7 @@ export default function AboutMe() {
       <div className="flex justify-center items-center flex-col mx-auto">
         {/* Intro Section */}
         <section className="mb-16 lg:mt-2 p-2">
-          <div className="space-y-4 max-w-4xl">
+          <div className="space-y-4 max-w-5xl">
             <div className="inline-flex items-center gap-2 px-3 py-1 text-sm font-bold tracking-widest text-[#90AFC5] uppercase border border-[#336B87] rounded-full bg-[#336B87]/10">
               <span className="relative flex h-2 w-2">
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#763626] opacity-75"></span>

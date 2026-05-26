@@ -2,8 +2,8 @@ import Projects from "../ui/projects";
 
 export default function ProjectsPage() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-16">
+    <div className="min-h-screen pt-16">
       <Projects/>        
-    </main>
+    </div>
   );
 }

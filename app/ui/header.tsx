@@ -43,14 +43,14 @@ export default function NavBar() {
           </button>
         </div>
       </nav>
-      <div className={clsx('p-5 flex flex-col gap-5 fixed top-16 right-4 rounded-2xl border border-[#336B87]/30 backdrop-blur-sm bg-transparent shadow-2xl z-40 min-w-[200px] lg:hidden',{'hidden':floatMenu === false})}>
-        <Link href='about' className="relative btn-ember inline-flex items-center gap-2 px-4 py-2 rounded-xl font-medium uppercase tracking-widest text-white overflow-hidden border border-transparent bg-gradient-to-br from-[#2A3132] via-[#336B87] to-[#90AFC5] transition-all duration-200 hover:-translate-y-0.5 hover:shadow-[0_8px_28px_rgba(51,107,135,0.35),0_2px_8px_rgba(118,54,38,0.25)] active:scale-95 active:shadow-none">
+      <div className={clsx('p-5 flex flex-col gap-5 fixed top-16 right-2 rounded-2xl border border-[#336B87]/30 backdrop-blur-sm bg-transparent shadow-2xl z-40 min-w-[200px] lg:hidden',{'hidden':floatMenu === false})}>
+        <Link onClick={() => handlerMenu()} href='about' className="relative btn-ember inline-flex items-center gap-2 px-4 py-2 rounded-xl font-medium uppercase tracking-widest text-white overflow-hidden border border-transparent bg-gradient-to-br from-[#2A3132] via-[#336B87] to-[#90AFC5] transition-all duration-200 hover:-translate-y-0.5 hover:shadow-[0_8px_28px_rgba(51,107,135,0.35),0_2px_8px_rgba(118,54,38,0.25)] active:scale-95 active:shadow-none">
           <span className="mx-auto">Sobre mi</span>
         </Link>
-        <Link href='projects' className="relative btn-ember inline-flex items-center gap-2 px-4 py-2 rounded-xl font-medium uppercase tracking-widest text-white overflow-hidden border border-transparent bg-gradient-to-br from-[#2A3132] via-[#336B87] to-[#90AFC5] transition-all duration-200 hover:-translate-y-0.5 hover:shadow-[0_8px_28px_rgba(51,107,135,0.35),0_2px_8px_rgba(118,54,38,0.25)] active:scale-95 active:shadow-none">
+        <Link onClick={() => handlerMenu()} href='projects' className="relative btn-ember inline-flex items-center gap-2 px-4 py-2 rounded-xl font-medium uppercase tracking-widest text-white overflow-hidden border border-transparent bg-gradient-to-br from-[#2A3132] via-[#336B87] to-[#90AFC5] transition-all duration-200 hover:-translate-y-0.5 hover:shadow-[0_8px_28px_rgba(51,107,135,0.35),0_2px_8px_rgba(118,54,38,0.25)] active:scale-95 active:shadow-none">
           <span className="mx-auto">Proyectos</span>
         </Link> 
-        <Link href='contact' className="relative btn-ember inline-flex items-center gap-2 px-4 py-2 rounded-xl font-medium uppercase tracking-widest text-white overflow-hidden border border-transparent bg-gradient-to-br from-[#2A3132] via-[#336B87] to-[#90AFC5] transition-all duration-200 hover:-translate-y-0.5 hover:shadow-[0_8px_28px_rgba(51,107,135,0.35),0_2px_8px_rgba(118,54,38,0.25)] active:scale-95 active:shadow-none">
+        <Link onClick={() => handlerMenu()} href='contact' className="relative btn-ember inline-flex items-center gap-2 px-4 py-2 rounded-xl font-medium uppercase tracking-widest text-white overflow-hidden border border-transparent bg-gradient-to-br from-[#2A3132] via-[#336B87] to-[#90AFC5] transition-all duration-200 hover:-translate-y-0.5 hover:shadow-[0_8px_28px_rgba(51,107,135,0.35),0_2px_8px_rgba(118,54,38,0.25)] active:scale-95 active:shadow-none">
           <span className="mx-auto">Contacto</span>
         </Link>
       </div>
