@@ -3,7 +3,7 @@ export default function AboutMe() {
     <div className="w-full pb-20">
       <div className="flex justify-center items-center flex-col mx-auto">
         {/* Intro Section */}
-        <section className="mb-16 lg:mt-2 p-2">
+        <section className="mb-10 lg:mt-2 p-2">
           <div className="space-y-4 max-w-5xl">
             <div className="inline-flex items-center gap-2 px-3 py-1 text-sm font-bold tracking-widest text-[#90AFC5] uppercase border border-[#336B87] rounded-full bg-[#336B87]/10">
               <span className="relative flex h-2 w-2">
@@ -26,7 +26,7 @@ export default function AboutMe() {
         </section>
 
         {/* Experience Section */}
-        <section className="mb-16 p-2">
+        <section className="mb-10 p-2">
           <h3 className="text-4xl font-black text-white text-center mb-8 tracking-tight">
             <span className="text-gradient-rust">Experiencia</span>
           </h3>
@@ -59,7 +59,7 @@ export default function AboutMe() {
         </section>
 
         {/* Education Section */}
-        <section className="mb-16 p-2">
+        <section className="mb-10 p-2">
           <h3 className="text-4xl font-black text-white text-center mb-8 tracking-tight">
             <span className="text-gradient-rust">Formación</span>
           </h3>
@@ -111,10 +111,23 @@ export default function AboutMe() {
               skills={["Google Firebase", "Vercel", "Oracle Cloud", "Railway"]} 
             />
             
-            {/* Otros */}
+            {/* Gestión de Proyectos */}
             <SkillCard 
-              title="Gestion de proyectos" 
+              title="Gestión de proyectos" 
               skills={["Scrum", "Trabajo en equipo", "Jira", "Design Thinking"]} 
+            />
+            <SkillCard
+              title="UML y Wireframes"
+              skills={["StarUML", "LucidChart", "Figma", "Marvel", "Balsamiq"]} 
+            />
+            <SkillCard
+              title="Test y Calidad"
+              skills={["Mokito", "JUnit", "Jacoco", "SonarQube", "Vitest", "Jest"]} 
+            />
+            {/* IA */}
+            <SkillCard 
+              title="Herramientas de IA" 
+              skills={["Copilot", "ChatGPT", "Claude", "Codex", "Stitch", "Gemini"]} 
             />
           </div>
         </section>
