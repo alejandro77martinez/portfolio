@@ -38,19 +38,20 @@ export default function Projects() {
       title: "Sistema Backend - Task Manager",
       category: "Backend",
       image: "/backend.png",
-      description: "Desarrollado bajo una arquitectura de microservicios robusta para la gestión de tareas y proyectos. Implementa seguridad mediante JWT almacenado en cookies HttpOnly, configuracion centralizada, un solo punto de entrada mediante un gateway y asegurando la calidad de los servicios con SonarQube.",
-      stack: ["Java 21", "Spring boot", "Spring cloud", "MongoDB Atlas", "Docker", "Docker Compose", "SonarQube","Junit", "Mokito"],
+      description: "Desarrollado bajo una arquitectura de microservicios robusta para la gestión de tareas y proyectos. Implementa seguridad mediante JWT y cookies HttpOnly, configuracion centralizada, un solo punto de entrada por gateway, persistencia de datos en MongoDB Atlas y el uso de SonarQube para la calidad del codigo.",
+      stack: ["Java 21", "Spring cloud", "MongoDB Atlas", "Orecle cloud", "Docker Compose", "SonarQube","Junit", "Mokito", "Jacoco"],
       features: [
         "3 microservicios independientes",
-        "Autenticación JWT con cookies",
-        "Configuración y autenticacion centralizada",
+        "Hosting en Oracle Cloud",
+        "Comunicacion entre microservicios solo en red interna docker",
         "Escalable y mantenible",
-        "Documentacion con Swagger UI"
+        "Documentacion de servicios con Swagger UI"
       ],
       links: {
         code: "https://github.com/alejandro77martinez/Microservicios-con-Spring",
         demo: "https://taskmanagerbackend.duckdns.org/api/v1/task/swagger-ui/index.html",
-        docs: "https://github.com/alejandro77martinez/Microservicios-con-Spring/blob/main/docs/especificacion-requisitos.md"
+        docs: "https://github.com/alejandro77martinez/Microservicios-con-Spring/blob/main/docs/especificacion-requisitos.md",
+        quality: "https://sonarcloud.io/organizations/alejandro77martinez/projects"
       }
     },
     {
@@ -58,18 +59,19 @@ export default function Projects() {
       title: "Sistema Frontend - Task Manager",
       category: "Frontend",
       image: "/frontend.png",
-      description: "Interfaz moderna que consume microservicios backend. Incluye autenticación, gestión de proyectos, tablero Kanban y chat en equipo.",
-      stack: ["Angular 21", "TypeScript", "Signals", "Tailwind CSS 4", "WebSocket", "REST API"],
+      description: "Interfaz de usuario moderna que consume el sistema backend - Task Manager. Para su uso es necesrio registrarse y autenticarse. Cuenta con tres seciones principales al momento, una para la gestión de proyectos, otra para la gestion de tareas mediante un tablero Kanban y la seccion team, encartgada de la comunicacion del equipo.",
+      stack: ["Angular 21", "TypeScript", "Fire base", "Tailwind CSS 4", "Flowbite", "Angular Signals", "Vitest"],
       features: [
+        "Reactividad con Angular Signals",
         "Login y registro de usuarios",
-        "Gestión de proyectos",
         "Tablero Kanban interactivo",
         "Chat de equipo en tiempo real",
-        "Reactividad con Signals de Angular"
+        "Hosting en Firebase"
       ],
       links: {
-        code: "#",
-        demo: "#"
+        code: "https://github.com/alejandro77martinez/TaskManager",
+        demo: "https://taskmanager-bf193.web.app/",
+        docs: "#"
       }
     },
     {
@@ -241,7 +243,7 @@ function ImageProject({ links, urlImg }: { links: Record<string, string>; urlImg
           {Object.entries(links).map(([label, url]) => {
             const buttonLabels: Record<string, string> = {
               demo: "Ver Demo",
-              live: "Ver en Vivo",
+              quality: "Calidad",
               code: "Código",
               docs: "Documentación"
             };
