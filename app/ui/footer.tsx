@@ -1,3 +1,4 @@
+import Link from 'next/dist/client/link'
 import Image from 'next/image'
 
 export default function Footer () {
@@ -11,16 +12,16 @@ export default function Footer () {
           bajo una licencia&nbsp;
         </span>
         <span>
-          <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" className='flex'> CC BY-NC-SA 4.0&nbsp;    
-            <img style={{height:22, marginLeft:3,}} src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1"/>
-            <img style={{height:22, marginLeft:3,}} src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1"/>
-            <img style={{height:22, marginLeft:3,}} src="https://mirrors.creativecommons.org/presskit/icons/nc.svg?ref=chooser-v1"/>
-            <img style={{height:22, marginLeft:3,}} src="https://mirrors.creativecommons.org/presskit/icons/sa.svg?ref=chooser-v1"/>
-          </a>  
+          <Link href="https://creativecommons.org/licenses/by-nc-sa/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" className='flex'> CC BY-NC-SA 4.0&nbsp;    
+            <Image width={22} height={22} style={{ height: 22, marginLeft: 2, }} src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1" alt={''}/>
+            <Image width={22} height={22} style={{ height: 22, marginLeft: 2, }} src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1" alt={''}/>
+            <Image width={22} height={22} style={{ height: 22, marginLeft: 2, }} src="https://mirrors.creativecommons.org/presskit/icons/nc.svg?ref=chooser-v1" alt={''}/>
+            <Image width={22} height={22} style={{ height: 22, marginLeft: 2, }} src="https://mirrors.creativecommons.org/presskit/icons/sa.svg?ref=chooser-v1" alt={''}/>
+          </Link>  
         </span>
       </p>
       <p>
-        Construido con <a href='https://nextjs.org' target="_blank">Next.js</a> y <a href='https://tailwindcss.com' target="_blank">Tailwindcss</a>
+        Construido con <Link href='https://nextjs.org' target="_blank">Next.js</Link> y <Link href='https://tailwindcss.com' target="_blank">Tailwindcss</Link>
       </p>
     </div>
   )
