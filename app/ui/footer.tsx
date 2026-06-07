@@ -6,7 +6,7 @@ export default function Footer () {
     <div className='flex flex-col items-center p-3 border-t border-[#336B87]/20'>
       <p className='flex justify-center items-center max-md:flex-col'>
         <span>
-          <a rel="cc:attributionURL" href="/">Sitio web&nbsp;</a> desarrollado por&nbsp;<a rel="cc:attributionURL dct:creator" property="cc:attributionName" href="contact"> Alejandro Martinez&nbsp;</a>
+          <Link rel="cc:attributionURL" href="/">Sitio web&nbsp;</Link> desarrollado por&nbsp;<Link rel="cc:attributionURL dct:creator" property="cc:attributionName" href="contact"> Alejandro Martinez&nbsp;</Link>
         </span>
         <span>
           bajo una licencia&nbsp;
