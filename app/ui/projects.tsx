@@ -19,7 +19,7 @@ export default function Projects() {
       image: "/codePen.png",
       category: "Frontend",
       description: "Colección de proyectos básicos desarrollados durante el bootcamp en FreeCodeCamp, demostrando dominio de HTML, CSS y React JSX. En el cual se obtuvo el certificado de Frontend Development Libraries V8 y el certificado de Responsive Web Design V8.",
-      stack: ["HTML", "CSS", "React", "JSX", "CodePen"],
+      stack: ["HTML", "CSS", "React", "JSX", "CodePen", "Bootstrap"],
       features: [
         "Múltiples proyectos interactivos",
         "Responsividad completa con breakpoints personalizados",
@@ -28,8 +28,8 @@ export default function Projects() {
         "Animaciones CSS y transiciones suaves"
       ],
       links: {
-        demo: "https://codepen.io/alejandroomartinez",
         code: "https://codepen.io/alejandrooMartinez/pen/XWwjMOe",
+        demo: "https://codepen.io/alejandroomartinez",
         docs: "https://www.freecodecamp.org/alejandroomartinez"
       }
     },
@@ -71,7 +71,8 @@ export default function Projects() {
       links: {
         code: "https://github.com/alejandro77martinez/TaskManager",
         demo: "https://taskmanager-bf193.web.app/",
-        docs: "#"
+        docs: "https://github.com/alejandro77martinez/TaskManager/blob/main/docs/dise%C3%B1o-software.md",
+        quality: "https://taskmanagerquality.duckdns.org"
       }
     },
     {
@@ -79,7 +80,7 @@ export default function Projects() {
       title: "Portafolio Personal",
       category: "Full Stack",
       image: "/portfolio.png",
-      description: "Este portafolio personal construido con tecnologías modernas. Escaparate profesional de habilidades y proyectos.",
+      description: "Este portafolio personal es más que una colección de proyectos, este sitio es una carta de presentación como desarrollador Full Stack. Está pensado para reclutadores, clientes y colegas que buscan evidencia real de trabajo, sin rodeos y qué demuestra mi forma de resolver problemas.",
       stack: ["Next.js 15", "TypeScript", "Tailwind CSS", "Vercel"],
       features: [
         "Página de presentación personalizada",
@@ -89,8 +90,9 @@ export default function Projects() {
         "Optimizado para SEO"
       ],
       links: {
-        code: "#",
-        live: "#"
+        code: "https://github.com/alejandro77martinez/portfolio",
+        demo: "https://portfolio-ashy-five-25.vercel.app",
+        docs: "https://github.com/alejandro77martinez/portfolio/blob/main/docs/design-thinking.md"
       }
     }
   ];
