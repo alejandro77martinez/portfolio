@@ -45,8 +45,7 @@ export default function AboutMe() {
               <p className="text-slate-400 leading-relaxed mb-4 text-lg">
                 Mantenimiento, escalado de funcionalidades y refactorización de sistemas legacy construidos 
                 en <span className="text-[#90AFC5] font-medium">PHP</span> y <span className="text-[#90AFC5] font-medium">Python (Odoo)</span>. 
-                Mejora de performance, optimización de bases de datos y implementación de nuevas características 
-                en ambientes de producción críticos.
+                Implementación de marcos de trabajo ágiles y desarrollo de documentación ingenieril de sistemas.
               </p>
               <div className="flex flex-wrap gap-2">
                 <SkillTag text="PHP" />
