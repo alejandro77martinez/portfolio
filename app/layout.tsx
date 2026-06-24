@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { Analytics } from '@vercel/analytics/next';
 import { Sofadi_One } from "next/font/google";
 import NeuralBackground from "@/app/ui/neuralBackground"
 import NavBar from "@/app/ui/header"
@@ -30,6 +31,7 @@ export default function RootLayout({
             <Footer />
           </footer>
         </NeuralBackground>
+        <Analytics />
       </body>
     </html>
   );
