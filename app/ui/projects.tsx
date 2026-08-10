@@ -39,7 +39,7 @@ export default function Projects() {
       category: "Backend",
       image: "/backend.png",
       description: "Desarrollado bajo una arquitectura de microservicios robusta para la gestión de tareas y proyectos. Implementa seguridad mediante JWT y cookies HttpOnly, configuracion centralizada, un solo punto de entrada por gateway, persistencia de datos en MongoDB Atlas y el uso de SonarQube para la calidad del codigo.",
-      stack: ["Java 21", "Spring cloud", "MongoDB Atlas", "Orecle cloud", "Docker Compose", "SonarQube","Junit", "Mokito", "Jacoco"],
+      stack: ["Java 21", "Spring cloud", "MongoDB Atlas", "Orecle cloud", "Docker Compose", "SonarQube", "Junit", "Mokito", "Jacoco"],
       features: [
         "3 microservicios independientes",
         "Hosting en Oracle Cloud",
@@ -111,11 +111,11 @@ export default function Projects() {
               Proyectos
             </div>
             <h2 className="text-6xl lg:text-7xl font-black text-white text-center tracking-tighter">
-              Trabajos <span className="text-gradient-rust">Realizados</span>
+              Desarrollos <span className="text-gradient-rust">Relevantes</span>
             </h2>
-            <p className="text-lg text-center text-slate-400 max-w-5xl leading-relaxed">
-              Esta es una selección de proyectos que demuestran mi experiencia en desarrollo full stack, 
-              desde el backend con una arquitectura en microservicios, 
+            <p className="text-xl text-center text-slate-400 max-w-5xl leading-relaxed">
+              Esta es una selección de proyectos que demuestran mi experiencia en desarrollo full stack,
+              desde el backend con una arquitectura en microservicios,
               hasta el frontend con un diseño de interfaces modernas.
             </p>
           </div>
@@ -134,7 +134,7 @@ export default function Projects() {
   );
 }
 
-function ProjectCard({ project }: { project: Project}) {
+function ProjectCard({ project }: { project: Project }) {
   const getCategoryColor = (category: string) => {
     switch (category) {
       case "Frontend":
@@ -227,41 +227,41 @@ function ProjectCard({ project }: { project: Project}) {
   );
 }
 
-function ImageProject({ links, urlImg }: { links: Record<string, string>; urlImg: string }) { 
-    return (
-      <div className="flex flex-col items-center justify-center h-full gap-5">
-        <div className="flex flex-col rounded-lg border-2 border-[#336B87]/20 h-85 lg:h-80">
-          <div className="flex h-3 bg-[#336B87] rounded-t-lg">
-              <span className="w-2 h-2 bg-red-500 rounded-full ml-2 mt-0.5"></span>
-              <span className="w-2 h-2 bg-[#90AFC5] rounded-full ml-2 mt-0.5"></span>
-              <span className="w-2 h-2 bg-green-500 rounded-full ml-2 mt-0.5"></span>
-          </div>
-          <div className="relative flex-1 min-h-0">
-            <Image src={urlImg} alt="Project Image" width={500} height={500} className="rounded-b-lg" style={{ width: '100%', height: '100%'}}/>
-          </div>
+function ImageProject({ links, urlImg }: { links: Record<string, string>; urlImg: string }) {
+  return (
+    <div className="flex flex-col items-center justify-center h-full gap-5">
+      <div className="flex flex-col rounded-lg border-2 border-[#336B87]/20 h-85 lg:h-80">
+        <div className="flex h-3 bg-[#336B87] rounded-t-lg">
+          <span className="w-2 h-2 bg-red-500 rounded-full ml-2 mt-0.5"></span>
+          <span className="w-2 h-2 bg-[#90AFC5] rounded-full ml-2 mt-0.5"></span>
+          <span className="w-2 h-2 bg-green-500 rounded-full ml-2 mt-0.5"></span>
         </div>
-        {/* Action Buttons */}
-        <div className="flex gap-2 flex-wrap">
-          {Object.entries(links).map(([label, url]) => {
-            const buttonLabels: Record<string, string> = {
-              demo: "Ver Demo",
-              quality: "Calidad",
-              code: "Código",
-              docs: "Documentación"
-            };
-            
-            return (
-              <a
-                key={label}
-                href={url}
-                target="_blank"
-                className="relative btn-ember inline-flex items-center px-3 py-1.5 text-xs rounded-xl font-medium uppercase tracking-widest text-white overflow-hidden border border-transparent bg-gradient-to-br from-[#2A3132] via-[#336B87] to-[#90AFC5] transition-all duration-200 hover:-translate-y-0.5 hover:shadow-[0_8px_28px_rgba(51,107,135,0.35),0_2px_8px_rgba(118,54,38,0.25)] active:scale-95 active:shadow-none"
-              >
-                {buttonLabels[label] || label}
-              </a>
-            );
-          })}
+        <div className="relative flex-1 min-h-0">
+          <Image src={urlImg} alt="Project Image" width={500} height={500} className="rounded-b-lg" style={{ width: '100%', height: '100%' }} />
         </div>
       </div>
-    )
+      {/* Action Buttons */}
+      <div className="flex gap-2 flex-wrap">
+        {Object.entries(links).map(([label, url]) => {
+          const buttonLabels: Record<string, string> = {
+            demo: "Ver Demo",
+            quality: "Calidad",
+            code: "Código",
+            docs: "Documentación"
+          };
+
+          return (
+            <a
+              key={label}
+              href={url}
+              target="_blank"
+              className="relative btn-ember inline-flex items-center px-3 py-1.5 text-xs rounded-xl font-medium uppercase tracking-widest text-white overflow-hidden border border-transparent bg-gradient-to-br from-[#2A3132] via-[#336B87] to-[#90AFC5] transition-all duration-200 hover:-translate-y-0.5 hover:shadow-[0_8px_28px_rgba(51,107,135,0.35),0_2px_8px_rgba(118,54,38,0.25)] active:scale-95 active:shadow-none"
+            >
+              {buttonLabels[label] || label}
+            </a>
+          );
+        })}
+      </div>
+    </div>
+  )
 }
