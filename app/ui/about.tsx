@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function AboutMe() {
   return (
-    <div className="w-full pb-20">
+    <div id="about" className="w-full pb-20">
       <div className="flex justify-center items-center flex-col mx-auto">
         {/* Intro Section */}
         <section className="mb-10 lg:mt-2 p-2">
@@ -47,7 +47,7 @@ export default function AboutMe() {
               <p className="text-slate-400 leading-relaxed mb-4 text-lg">
                 Mantenimiento y escalado de funcionalidades de sistema legacy construido con PHP 5 y base de datos PostgreSQL 9,
                 incrementando en un 30% las funciones del sistema. Desarrollo de módulos en Odoo 14, los cuales ayudaron a la gestión de los practicantes en SECTEI,
-                a la administración de cursos ofrecidos a empleados y por último uno para la gestión de tickets del área de TI.
+                a la administración de cursos ofrecidos a empleados y a la gestión de tickets del área de TI.
                 Implementación de metodología ágil Scrum para gestión de actividades, lo que mejoró la entrega de trabajo en un 15%.
                 Desarrollo de documentación técnica de sistemas para facilitar el mantenimiento y la transferencia de conocimiento.
               </p>
@@ -82,8 +82,10 @@ export default function AboutMe() {
             </div>
             <div className="group relative glass-card p-4 lg:p-6 rounded-xl border border-[#336B87]/20 hover:border-[#336B87]/50 transition-all duration-300">
               <div className="absolute top-0 left-0 w-1 h-full bg-gradient-to-b from-[#336B87] to-transparent rounded-l-xl"></div>
-              <h4 className="text-2xl font-bold text-white mb-2">NDG Linux Essentials</h4>
-              <p className="text-[#90AFC5] font-semibold text-xl">Cisco Networking Academy</p>
+              <Link href="/NDG_Linux_Essentials.pdf" target="_blank" rel="noopener noreferrer">
+                <h4 className="text-2xl font-bold text-white mb-2">NDG Linux Essentials</h4>
+                <p className="text-[#90AFC5] font-semibold text-xl">Cisco Networking Academy</p>
+              </Link>
               <p className="text-slate-400 leading-relaxed mb-2 text-lg">Curso </p>
               <SkillTag text="2024" />
             </div>

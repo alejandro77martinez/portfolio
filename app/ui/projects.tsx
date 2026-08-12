@@ -18,8 +18,8 @@ export default function Projects() {
       title: "Portafolio de Proyectos Básicos",
       image: "/codePen.png",
       category: "Frontend",
-      description: "Colección de proyectos básicos desarrollados durante el bootcamp en FreeCodeCamp, demostrando dominio de HTML, CSS y React JSX. En el cual se obtuvo el certificado de Frontend Development Libraries V8 y el certificado de Responsive Web Design V8.",
-      stack: ["HTML", "CSS", "React", "JSX", "CodePen", "Bootstrap"],
+      description: "Colección de proyectos básicos desarrollados durante el bootcamp en FreeCodeCamp, demostrando dominio de tecnologías base para desarrollo web como HTML, CSS, JS y React. Ademas se obtuvo el certificado de Frontend Development Libraries V8 y el certificado de Responsive Web Design V8.",
+      stack: ["HTML", "CSS", "React", "JSX", "CodePen", "Bootstrap", "Redux"],
       features: [
         "Múltiples proyectos interactivos",
         "Responsividad completa con breakpoints personalizados",
@@ -98,7 +98,7 @@ export default function Projects() {
   ];
 
   return (
-    <div className="w-full pb-20">
+    <div id="projects" className="w-full pb-20">
       <div className="flex justify-center items-center flex-col mx-auto px-2">
         {/* Header */}
         <section className="mb-10 lg:mt-2 p-2">
@@ -111,7 +111,7 @@ export default function Projects() {
               Proyectos
             </div>
             <h2 className="text-6xl lg:text-7xl font-black text-white text-center tracking-tighter">
-              Desarrollos <span className="text-gradient-rust">Relevantes</span>
+              Proyectos <span className="text-gradient-rust">Relevantes</span>
             </h2>
             <p className="text-xl text-center text-slate-400 max-w-5xl leading-relaxed">
               Esta es una selección de proyectos que demuestran mi experiencia en desarrollo full stack,

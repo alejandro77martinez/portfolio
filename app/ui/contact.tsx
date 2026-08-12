@@ -30,7 +30,7 @@ export default function ContactMe() {
   ];
 
   return (
-    <div className="w-full pb-20">
+    <div id="contact" className="w-full pb-20">
       <div className="flex justify-center items-center flex-col mx-auto px-2">
         {/* Header */}
         <section className="mb-10 lg:mt-2 p-2">
