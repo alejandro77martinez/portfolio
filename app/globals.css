@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+  scroll-behavior: smooth;
+}
+
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
@@ -23,19 +27,43 @@
 }
 
 @keyframes float {
-  0%, 100% { transform: translateY(0px) translateX(0px); }
-  50% { transform: translateY(-20px) translateX(10px); }
+
+  0%,
+  100% {
+    transform: translateY(0px) translateX(0px);
+  }
+
+  50% {
+    transform: translateY(-20px) translateX(10px);
+  }
 }
 
 @keyframes float-node {
-  0%, 100% { transform: translate(0, 0); }
-  50% { transform: translate(5px, -5px); }
+
+  0%,
+  100% {
+    transform: translate(0, 0);
+  }
+
+  50% {
+    transform: translate(5px, -5px);
+  }
 }
 
 @keyframes pulse-line {
-  0% { stroke-dashoffset: 100; opacity: 0.2; }
-  50% { opacity: 0.5; }
-  100% { stroke-dashoffset: 0; opacity: 0.2; }
+  0% {
+    stroke-dashoffset: 100;
+    opacity: 0.2;
+  }
+
+  50% {
+    opacity: 0.5;
+  }
+
+  100% {
+    stroke-dashoffset: 0;
+    opacity: 0.2;
+  }
 }
 
 .animate-float {
@@ -78,6 +106,6 @@
   z-index: -1;
 }
 
-.btn-ember:hover::before { 
-  opacity: 1; 
+.btn-ember:hover::before {
+  opacity: 1;
 }

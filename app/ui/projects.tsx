@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 interface Project {
   id: number;
@@ -18,8 +19,8 @@ export default function Projects() {
       title: "Portafolio de Proyectos Básicos",
       image: "/codePen.png",
       category: "Frontend",
-      description: "Colección de proyectos básicos desarrollados durante el bootcamp en FreeCodeCamp, demostrando dominio de HTML, CSS y React JSX. En el cual se obtuvo el certificado de Frontend Development Libraries V8 y el certificado de Responsive Web Design V8.",
-      stack: ["HTML", "CSS", "React", "JSX", "CodePen", "Bootstrap"],
+      description: "Colección de proyectos básicos desarrollados durante el bootcamp en FreeCodeCamp, demostrando dominio de tecnologías base para desarrollo web como HTML, CSS, JS y React. Ademas se obtuvo el certificado de Frontend Development Libraries V8 y el certificado de Responsive Web Design V8.",
+      stack: ["HTML", "CSS", "React", "JSX", "CodePen", "Bootstrap", "Redux"],
       features: [
         "Múltiples proyectos interactivos",
         "Responsividad completa con breakpoints personalizados",
@@ -38,8 +39,8 @@ export default function Projects() {
       title: "Sistema Backend - Task Manager",
       category: "Backend",
       image: "/backend.png",
-      description: "Desarrollado bajo una arquitectura de microservicios robusta para la gestión de tareas y proyectos. Implementa seguridad mediante JWT y cookies HttpOnly, configuracion centralizada, un solo punto de entrada por gateway, persistencia de datos en MongoDB Atlas y el uso de SonarQube para la calidad del codigo.",
-      stack: ["Java 21", "Spring cloud", "MongoDB Atlas", "Orecle cloud", "Docker Compose", "SonarQube","Junit", "Mokito", "Jacoco"],
+      description: "Desarrollado bajo una arquitectura de microservicios robusta para la gestión de tareas y proyectos. Implementa seguridad mediante JWT y cookies HttpOnly, configuracion centralizada, un solo punto de entrada por gateway, persistencia de datos en MongoDB Atlas y el uso de SonarQube para la calidad del codigo. Debes autenticarte en el sitio e ingresar al apartado de Api Docs para visualizar la documentacion de la api.",
+      stack: ["Java 21", "Spring cloud", "MongoDB Atlas", "Orecle cloud", "Docker Compose", "SonarQube", "Junit", "Mokito", "Jacoco"],
       features: [
         "3 microservicios independientes",
         "Hosting en Oracle Cloud",
@@ -49,7 +50,7 @@ export default function Projects() {
       ],
       links: {
         code: "https://github.com/alejandro77martinez/Microservicios-con-Spring",
-        demo: "https://taskmanagerbackend.duckdns.org/api/v1/task/swagger-ui/index.html",
+        demo: "https://taskmanager-bf193.web.app/",
         docs: "https://github.com/alejandro77martinez/Microservicios-con-Spring/blob/main/docs/especificacion-requisitos.md",
         quality: "https://sonarcloud.io/organizations/alejandro77martinez/projects"
       }
@@ -77,6 +78,24 @@ export default function Projects() {
     },
     {
       id: 4,
+      title: "Corp Caps",
+      category: "Full Stack",
+      image: "/dashboard.png",
+      description: "Dashboard para la gestión de ventas y clientes. Desarrollado en el curso oficial de Next.js ofrecido por Vercel, extendida con funcionalidades adicionales para profundizar en el ecosistema del framework. Implementé autenticación de usuarios con better-auth (fork de NextAuth). Diseñé el modelo de datos y persistencia con PostgreSQL (Neon) y Prisma ORM. Añadí pruebas unitarias y de integración con Vitest y Testing Library. Integré almacenamiento de archivos mediante Vercel Blob y envío de correos con Nodemailer.",
+      stack: ["Next.js 16", "TypeScript", "Tailwind CSS", "PostgreSQL", "Prisma ORM", "Vitest", "Testing Library", "Vercel Blob", "Nodemailer"],
+      features: [
+        "Registro y login de usuarios con Better-Auth",
+        "Gestion de clientes",
+        "Gestion de facturas",
+        "Hooks personalizados y genericos para el manejo de formularios."
+      ],
+      links: {
+        code: "https://github.com/alejandro77martinez/nextjs-dashboard",
+        demo: "https://nextjs-dashboard-lemon-tau-78.vercel.app"
+      }
+    },
+    {
+      id: 5,
       title: "Portafolio Personal",
       category: "Full Stack",
       image: "/portfolio.png",
@@ -98,7 +117,7 @@ export default function Projects() {
   ];
 
   return (
-    <div className="w-full pb-20">
+    <div id="projects" className="w-full pb-20">
       <div className="flex justify-center items-center flex-col mx-auto px-2">
         {/* Header */}
         <section className="mb-10 lg:mt-2 p-2">
@@ -111,11 +130,11 @@ export default function Projects() {
               Proyectos
             </div>
             <h2 className="text-6xl lg:text-7xl font-black text-white text-center tracking-tighter">
-              Trabajos <span className="text-gradient-rust">Realizados</span>
+              Proyectos <span className="text-gradient-rust">Relevantes</span>
             </h2>
-            <p className="text-lg text-center text-slate-400 max-w-5xl leading-relaxed">
-              Esta es una selección de proyectos que demuestran mi experiencia en desarrollo full stack, 
-              desde el backend con una arquitectura en microservicios, 
+            <p className="text-xl text-center text-slate-400 max-w-5xl leading-relaxed">
+              Esta es una selección de proyectos que demuestran mi experiencia en desarrollo full stack,
+              desde el backend con una arquitectura en microservicios,
               hasta el frontend con un diseño de interfaces modernas.
             </p>
           </div>
@@ -134,7 +153,7 @@ export default function Projects() {
   );
 }
 
-function ProjectCard({ project }: { project: Project}) {
+function ProjectCard({ project }: { project: Project }) {
   const getCategoryColor = (category: string) => {
     switch (category) {
       case "Frontend":
@@ -227,41 +246,41 @@ function ProjectCard({ project }: { project: Project}) {
   );
 }
 
-function ImageProject({ links, urlImg }: { links: Record<string, string>; urlImg: string }) { 
-    return (
-      <div className="flex flex-col items-center justify-center h-full gap-5">
-        <div className="flex flex-col rounded-lg border-2 border-[#336B87]/20 h-85 lg:h-80">
-          <div className="flex h-3 bg-[#336B87] rounded-t-lg">
-              <span className="w-2 h-2 bg-red-500 rounded-full ml-2 mt-0.5"></span>
-              <span className="w-2 h-2 bg-[#90AFC5] rounded-full ml-2 mt-0.5"></span>
-              <span className="w-2 h-2 bg-green-500 rounded-full ml-2 mt-0.5"></span>
-          </div>
-          <div className="relative flex-1 min-h-0">
-            <Image src={urlImg} alt="Project Image" width={500} height={500} className="rounded-b-lg" style={{ width: '100%', height: '100%'}}/>
-          </div>
+function ImageProject({ links, urlImg }: { links: Record<string, string>; urlImg: string }) {
+  return (
+    <div className="flex flex-col items-center justify-center h-full gap-5">
+      <div className="flex flex-col rounded-lg border-2 border-[#336B87]/20 h-85 lg:h-80">
+        <div className="flex h-3 bg-[#336B87] rounded-t-lg">
+          <span className="w-2 h-2 bg-red-500 rounded-full ml-2 mt-0.5"></span>
+          <span className="w-2 h-2 bg-[#90AFC5] rounded-full ml-2 mt-0.5"></span>
+          <span className="w-2 h-2 bg-green-500 rounded-full ml-2 mt-0.5"></span>
         </div>
-        {/* Action Buttons */}
-        <div className="flex gap-2 flex-wrap">
-          {Object.entries(links).map(([label, url]) => {
-            const buttonLabels: Record<string, string> = {
-              demo: "Ver Demo",
-              quality: "Calidad",
-              code: "Código",
-              docs: "Documentación"
-            };
-            
-            return (
-              <a
-                key={label}
-                href={url}
-                target="_blank"
-                className="relative btn-ember inline-flex items-center px-3 py-1.5 text-xs rounded-xl font-medium uppercase tracking-widest text-white overflow-hidden border border-transparent bg-gradient-to-br from-[#2A3132] via-[#336B87] to-[#90AFC5] transition-all duration-200 hover:-translate-y-0.5 hover:shadow-[0_8px_28px_rgba(51,107,135,0.35),0_2px_8px_rgba(118,54,38,0.25)] active:scale-95 active:shadow-none"
-              >
-                {buttonLabels[label] || label}
-              </a>
-            );
-          })}
+        <div className="relative flex-1 min-h-0">
+          <Image src={urlImg} alt="Project Image" width={500} height={500} className="rounded-b-lg" style={{ width: '100%', height: '100%' }} />
         </div>
       </div>
-    )
+      {/* Action Buttons */}
+      <div className="flex gap-2 flex-wrap">
+        {Object.entries(links).map(([label, url]) => {
+          const buttonLabels: Record<string, string> = {
+            demo: "Ver Demo",
+            quality: "Calidad",
+            code: "Código",
+            docs: "Documentación"
+          };
+
+          return (
+            <Link
+              key={label}
+              href={url}
+              target="_blank"
+              className="relative btn-ember inline-flex items-center px-3 py-1.5 text-xs rounded-xl font-medium uppercase tracking-widest text-white overflow-hidden border border-transparent bg-gradient-to-br from-[#2A3132] via-[#336B87] to-[#90AFC5] transition-all duration-200 hover:-translate-y-0.5 hover:shadow-[0_8px_28px_rgba(51,107,135,0.35),0_2px_8px_rgba(118,54,38,0.25)] active:scale-95 active:shadow-none"
+            >
+              {buttonLabels[label] || label}
+            </Link>
+          );
+        })}
+      </div>
+    </div>
+  )
 }
