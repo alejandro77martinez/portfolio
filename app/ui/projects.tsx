@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 interface Project {
   id: number;
@@ -38,7 +39,7 @@ export default function Projects() {
       title: "Sistema Backend - Task Manager",
       category: "Backend",
       image: "/backend.png",
-      description: "Desarrollado bajo una arquitectura de microservicios robusta para la gestión de tareas y proyectos. Implementa seguridad mediante JWT y cookies HttpOnly, configuracion centralizada, un solo punto de entrada por gateway, persistencia de datos en MongoDB Atlas y el uso de SonarQube para la calidad del codigo.",
+      description: "Desarrollado bajo una arquitectura de microservicios robusta para la gestión de tareas y proyectos. Implementa seguridad mediante JWT y cookies HttpOnly, configuracion centralizada, un solo punto de entrada por gateway, persistencia de datos en MongoDB Atlas y el uso de SonarQube para la calidad del codigo. Debes autenticarte en el sitio e ingresar al apartado de Api Docs para visualizar la documentacion de la api.",
       stack: ["Java 21", "Spring cloud", "MongoDB Atlas", "Orecle cloud", "Docker Compose", "SonarQube", "Junit", "Mokito", "Jacoco"],
       features: [
         "3 microservicios independientes",
@@ -49,7 +50,7 @@ export default function Projects() {
       ],
       links: {
         code: "https://github.com/alejandro77martinez/Microservicios-con-Spring",
-        demo: "https://taskmanagerbackend.duckdns.org/api/v1/task/swagger-ui/index.html",
+        demo: "https://taskmanager-bf193.web.app/",
         docs: "https://github.com/alejandro77martinez/Microservicios-con-Spring/blob/main/docs/especificacion-requisitos.md",
         quality: "https://sonarcloud.io/organizations/alejandro77martinez/projects"
       }
@@ -77,6 +78,24 @@ export default function Projects() {
     },
     {
       id: 4,
+      title: "Corp Caps",
+      category: "Full Stack",
+      image: "/dashboard.png",
+      description: "Dashboard para la gestión de ventas y clientes. Desarrollado en el curso oficial de Next.js ofrecido por Vercel, extendida con funcionalidades adicionales para profundizar en el ecosistema del framework. Implementé autenticación de usuarios con better-auth (fork de NextAuth). Diseñé el modelo de datos y persistencia con PostgreSQL (Neon) y Prisma ORM. Añadí pruebas unitarias y de integración con Vitest y Testing Library. Integré almacenamiento de archivos mediante Vercel Blob y envío de correos con Nodemailer.",
+      stack: ["Next.js 16", "TypeScript", "Tailwind CSS", "PostgreSQL", "Prisma ORM", "Vitest", "Testing Library", "Vercel Blob", "Nodemailer"],
+      features: [
+        "Registro y login de usuarios con Better-Auth",
+        "Gestion de clientes",
+        "Gestion de facturas",
+        "Hooks personalizados y genericos para el manejo de formularios."
+      ],
+      links: {
+        code: "https://github.com/alejandro77martinez/nextjs-dashboard",
+        demo: "https://nextjs-dashboard-lemon-tau-78.vercel.app"
+      }
+    },
+    {
+      id: 5,
       title: "Portafolio Personal",
       category: "Full Stack",
       image: "/portfolio.png",
@@ -251,14 +270,14 @@ function ImageProject({ links, urlImg }: { links: Record<string, string>; urlImg
           };
 
           return (
-            <a
+            <Link
               key={label}
               href={url}
               target="_blank"
               className="relative btn-ember inline-flex items-center px-3 py-1.5 text-xs rounded-xl font-medium uppercase tracking-widest text-white overflow-hidden border border-transparent bg-gradient-to-br from-[#2A3132] via-[#336B87] to-[#90AFC5] transition-all duration-200 hover:-translate-y-0.5 hover:shadow-[0_8px_28px_rgba(51,107,135,0.35),0_2px_8px_rgba(118,54,38,0.25)] active:scale-95 active:shadow-none"
             >
               {buttonLabels[label] || label}
-            </a>
+            </Link>
           );
         })}
       </div>
