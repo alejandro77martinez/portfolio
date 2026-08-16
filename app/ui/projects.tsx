@@ -40,12 +40,12 @@ export default function Projects() {
       category: "Backend",
       image: "/backend.png",
       description: "Desarrollado bajo una arquitectura de microservicios robusta para la gestión de tareas y proyectos. Implementa seguridad mediante JWT y cookies HttpOnly, configuracion centralizada, un solo punto de entrada por gateway, persistencia de datos en MongoDB Atlas y el uso de SonarQube para la calidad del codigo. Debes autenticarte en el sitio e ingresar al apartado de Api Docs para visualizar la documentacion de la api.",
-      stack: ["Java 21", "Spring cloud", "MongoDB Atlas", "Orecle cloud", "Docker Compose", "SonarQube", "Junit", "Mokito", "Jacoco"],
+      stack: ["Java 21", "Spring cloud", "MongoDB Atlas", "Orecle cloud", "Docker Compose", "SonarQube", "Junit", "Mokito", "Jacoco", "Jenkins", "VPS"],
       features: [
-        "3 microservicios independientes",
-        "Hosting en Oracle Cloud",
-        "Comunicacion entre microservicios solo en red interna docker",
-        "Escalable y mantenible",
+        "3 microservicios de dominio independientes",
+        "Hosting en VPS de Oracle Cloud con Docker Compose",
+        "Automatizacion de testing, analisis con SonarQube y contenerizacion con Jenkins pipeline",
+        "Arquitectura escalable y mantenible",
         "Documentacion de servicios con Swagger UI"
       ],
       links: {
@@ -61,7 +61,7 @@ export default function Projects() {
       category: "Frontend",
       image: "/frontend.png",
       description: "Interfaz de usuario moderna que consume el sistema backend - Task Manager. Para su uso es necesrio registrarse y autenticarse. Cuenta con tres seciones principales al momento, una para la gestión de proyectos, otra para la gestion de tareas mediante un tablero Kanban y la seccion team, encartgada de la comunicacion del equipo.",
-      stack: ["Angular 21", "TypeScript", "Fire base", "Tailwind CSS 4", "Flowbite", "Angular Signals", "Vitest"],
+      stack: ["Angular 21", "TypeScript", "Fire base", "Tailwind CSS 4", "Flowbite", "Angular Signals", "RxJS", "Vitest"],
       features: [
         "Reactividad con Angular Signals",
         "Login y registro de usuarios",
@@ -82,7 +82,7 @@ export default function Projects() {
       category: "Full Stack",
       image: "/dashboard.png",
       description: "Dashboard para la gestión de ventas y clientes. Desarrollado en el curso oficial de Next.js ofrecido por Vercel, extendida con funcionalidades adicionales para profundizar en el ecosistema del framework. Implementé autenticación de usuarios con better-auth (fork de NextAuth). Diseñé el modelo de datos y persistencia con PostgreSQL (Neon) y Prisma ORM. Añadí pruebas unitarias y de integración con Vitest y Testing Library. Integré almacenamiento de archivos mediante Vercel Blob y envío de correos con Nodemailer.",
-      stack: ["Next.js 16", "TypeScript", "Tailwind CSS", "PostgreSQL", "Prisma ORM", "Vitest", "Testing Library", "Vercel Blob", "Nodemailer"],
+      stack: ["Next.js 16", "TypeScript", "Tailwind CSS", "PostgreSQL", "Prisma ORM", "Vitest", "Testing Library", "Vercel Blob", "Nodemailer", "Zod"],
       features: [
         "Registro y login de usuarios con Better-Auth",
         "Gestion de clientes",

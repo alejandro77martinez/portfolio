@@ -120,7 +120,7 @@ export default function AboutMe() {
             {/* Frontend */}
             <SkillCard
               title="Frontend"
-              skills={["React", "Next.js", "Angular", "TypeScript", "Tailwind", "Flowbite", "Bootstrap", "JQuery", "CSS"]}
+              skills={["React", "Next.js", "Angular", "TypeScript", "Tailwind", "Flowbite", "Bootstrap", "RxJS", "Redux"]}
             />
 
             {/* Backend */}
